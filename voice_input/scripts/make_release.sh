@@ -25,6 +25,12 @@ else
   RELEASE_DIR="$PROJECT_ROOT"
 fi
 
+if [ -f "$PROJECT_ROOT/voice_input/README.md" ]; then
+  README_SRC="$PROJECT_ROOT/voice_input/README.md"
+else
+  README_SRC="$PROJECT_ROOT/README.md"
+fi
+
 echo "== 复制源码 =="
 mkdir -p "$STAGE/voice_input"
 cp -r voice_input/core      "$STAGE/voice_input/core"
@@ -43,7 +49,7 @@ cp "$RELEASE_DIR/setup.bat"   "$STAGE/"
 cp "$RELEASE_DIR/start.bat"   "$STAGE/"
 cp "$RELEASE_DIR/使用说明.md" "$STAGE/"
 cp "$RELEASE_DIR/voice_input_context.py" "$STAGE/"
-cp voice_input/README.md           "$STAGE/README.md"
+cp "$README_SRC"                   "$STAGE/README.md"
 cp voice_input/.env.example        "$STAGE/.env.example"
 
 if [ "$INCLUDE_PRIVATE_ENV" = "1" ] && [ -f voice_input/release/.env ]; then
