@@ -19,6 +19,12 @@ fi
 
 mkdir -p "$STAGE"
 
+if [ -f "$PROJECT_ROOT/voice_input/release/setup.bat" ]; then
+  RELEASE_DIR="$PROJECT_ROOT/voice_input/release"
+else
+  RELEASE_DIR="$PROJECT_ROOT"
+fi
+
 echo "== 复制源码 =="
 mkdir -p "$STAGE/voice_input"
 cp -r voice_input/core      "$STAGE/voice_input/core"
@@ -33,10 +39,10 @@ cp    voice_input/.env.example   "$STAGE/voice_input/"
 cp    voice_input/requirements.txt "$STAGE/voice_input/"
 
 echo "== 复制启动脚本 + 说明 =="
-cp voice_input/release/setup.bat   "$STAGE/"
-cp voice_input/release/start.bat   "$STAGE/"
-cp voice_input/release/使用说明.md "$STAGE/"
-cp voice_input/release/voice_input_context.py "$STAGE/"
+cp "$RELEASE_DIR/setup.bat"   "$STAGE/"
+cp "$RELEASE_DIR/start.bat"   "$STAGE/"
+cp "$RELEASE_DIR/使用说明.md" "$STAGE/"
+cp "$RELEASE_DIR/voice_input_context.py" "$STAGE/"
 cp voice_input/README.md           "$STAGE/README.md"
 cp voice_input/.env.example        "$STAGE/.env.example"
 
