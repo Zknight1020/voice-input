@@ -1,0 +1,76 @@
+# voice_input 项目热词表
+# 一行一个词；# 开头是注释。
+# 用途：拼成自然语言段塞到豆包 ASR 握手帧的 context 字段，让 LM 偏向这些术语。
+# 修改后无需重启——下次录音重新读。
+
+# ── 当前项目（Benewake 激光雷达 + 上位机 MPC）──
+Benewake
+Horn X2
+激光雷达
+上位机
+MPC
+MCP
+点云
+PCD
+PLY
+Three.js
+OrbitControls
+WebSocket
+lidar_bridge
+LidarWebViewer
+SDK
+UDP
+DCSP
+MDOP
+Parallels
+en5
+
+# ── 字节豆包 / 火山 / AI 链路 ──
+豆包
+火山引擎
+ASR
+TTS
+bigmodel
+WebRTC
+FastMCP
+Function Calling
+Anthropic
+Claude
+Claude Code
+cursor
+
+# ── 通用编程 ──
+TypeScript
+Python
+asyncio
+aiohttp
+pytest
+SQLite
+HTTP
+REST
+JSON
+WebSocket
+GitHub
+gh
+brew
+launchctl
+ffmpeg
+sox
+
+# ── 我的基础设施 ──
+song-hub
+song-vps-mgmt
+ROG
+M1
+VPS
+SSH
+Vivado
+SynthPilot
+Zynq
+Alinx
+FPGA
+PL
+PS
+RTL
+Verilog
+SystemVerilog

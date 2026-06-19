@@ -1,0 +1,13 @@
+.env
+venv/
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+.DS_Store
+VoiceInput_release.zip
+build/
+dist/
+.pytest_cache/
+.coverage
+htmlcov/
